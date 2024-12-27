@@ -1,0 +1,101 @@
+.header {
+  width: 100%;
+  padding-block: 2.4rem;
+}
+
+.header__nav_list {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr auto 45% auto auto auto;
+  align-items: center;
+  gap: 4rem;
+
+  list-style-type: none;
+}
+
+.header__logo {
+  width: 8rem;
+  height: 4.8rem;
+}
+
+.header__nav_list_link {
+  font-family: var(--text-font);
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--links-color);
+
+  text-decoration: none;
+}
+
+.header__nav_list_item-input {
+  position: relative;
+}
+
+.header__nav_list_input {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 2.4rem;
+  background-color: var(--text-color);
+
+  font-family: var(--text-font);
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--links-color);
+
+  border: none;
+  border-radius: 3.2rem;
+}
+
+.search-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  position: absolute;
+  top: 50%;
+  right: 2.4rem;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .header {
+    padding: 2.4rem 6rem;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .header__nav_list {
+    grid-template-areas:
+      'logo about login profile cart'
+      'input input input input input';
+    grid-template-columns: 1fr 2fr 0.5fr 0.5fr 0.5fr;
+  }
+
+  .header__logo {
+    grid-area: logo;
+    justify-self: center;
+  }
+
+  .header__nav_list_link-about {
+    grid-area: about;
+  }
+
+  .header__nav_list_item-login {
+    grid-area: login;
+  }
+
+  .header__nav_list_item-profile {
+    grid-area: profile;
+  }
+
+  .header__nav_list_item-cart {
+    grid-area: cart;
+  }
+
+  .header__nav_list_item-input {
+    grid-area: input;
+  }
+}

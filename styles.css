@@ -1,0 +1,44 @@
+:root {
+  --main-text-color: #0b254b;
+  --secondary-text-color: #5e6e89;
+  --text-color: #efefef;
+  --text-font: 'Poppins', sans-serif;
+  --title-font: 'Orbitron', sans-serif;
+
+  --links-color: #090129;
+
+  --main-highlight-color: #ff55df;
+  --secondary-highlight-color: #8fff24;
+
+  --button-background-color: #780bf7;
+
+  --background-color: #ffffff;
+
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+}
+
+.container {
+  width: 75%;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 100%;
+  }
+}
